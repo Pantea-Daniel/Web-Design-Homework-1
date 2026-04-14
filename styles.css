@@ -1,3 +1,8 @@
+/* =========================================================
+   Project: Junior Developer Portfolio - Original Style
+   (Movement effects removed, Skip-link visible)
+   ========================================================= */
+
 body {
     margin: 0;
     font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
@@ -7,11 +12,10 @@ body {
     line-height: 1.6;
 }
 
-
+/* --- Skip Link (Always Visible) --- */
 .skip-link {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    display: inline-block;
+    margin: 16px;
     background: #31c99c;
     color: #fff;
     padding: 7px 16px;
@@ -19,13 +23,12 @@ body {
     font-weight: 600;
     font-size: medium;
     text-decoration: none;
-
+    border: 1px solid #065f46;
 }
 
 .skip-link:hover {
     background-color: #3730a3;
 }
-
 
 /* --- Header & Branding --- */
 header {
@@ -34,7 +37,6 @@ header {
     background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #059669 100%);
     position: relative;
     border-bottom: 5px solid #f59e0b;
-    /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
 }
 
 .site-name {
@@ -55,7 +57,7 @@ header {
     letter-spacing: 2px;
 }
 
-/* --- Navigation (Frosted Glass Effect) --- */
+/* --- Navigation --- */
 nav {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.9);
@@ -83,13 +85,12 @@ nav a {
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: var( all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
     background-color: #ecfdf5;
     color: #059669;
-    transform: translateY(-2px);
 }
 
 nav a[aria-current="page"] {
@@ -106,7 +107,7 @@ main {
     min-height: 75vh;
 }
 
-/* Sections */
+/* Sections - Removed movement/transform effects */
 section {
     background: #ffffff;
     padding: 50px 60px;
@@ -115,12 +116,6 @@ section {
     border: 1px solid rgba(229, 231, 235, 0.8);
     border-left: 8px solid #f59e0b;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 section:nth-child(even) {
@@ -137,17 +132,10 @@ article {
     border: 1px solid #f3f4f6;
     border-left: 4px solid #059669;
     max-width: 95%;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-article:hover {
-    background-color: #ffffff;
-    border-color: #e5e7eb;
 }
 
 /* --- Typography --- */
-h1,
-h2 {
+h1, h2 {
     color: #000000;
 }
 
@@ -159,7 +147,6 @@ h2 {
 
 h3 {
     color: #b45309;
-    /* Bronze/Gold */
     margin-top: 0;
 }
 
@@ -222,20 +209,16 @@ label {
     margin-top: 20px;
 }
 
-input,
-select,
-textarea {
+input, select, textarea {
     width: 100%;
     padding: 14px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     font-size: 1rem;
     box-sizing: border-box;
-    transition: var( all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
 }
 
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
     border-color: #059669;
     box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
     outline: none;
@@ -252,13 +235,11 @@ button[type="submit"] {
     font-weight: 700;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: var( all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1));
+    transition: opacity 0.3s ease;
 }
 
 button[type="submit"]:hover {
     opacity: 0.9;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(6, 78, 59, 0.2);
 }
 
 /* --- Footer --- */
@@ -269,8 +250,4 @@ footer {
     color: #9ca3af;
     border-top: 5px solid #f59e0b;
     margin-top: 40px;
-}
-
-footer p {
-    margin: 5px 0;
 }
