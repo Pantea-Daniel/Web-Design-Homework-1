@@ -1,52 +1,115 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junior Dev Showcase | Project Portfolio</title>
+    <title>Home | Junior Dev Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <header>
-
-        <h1>Junior Developer Project Showcase</h1>
+        <p class="site-name">Junior Developer</p>
+        <p class="site-tagline">Software Development Showcase 2026</p>
 
         <a href="#main-content" class="skip-link">Skip to main content</a>
     </header>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="data.html">Project Data</a></li>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="data.html">Data</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-<main id="main-content">
-    <section id="intro">
-        <h2>Project Overview: Polyglot TTS</h2>
-        <p>I developed a Python-based automation tool that transforms multilingual text into high-quality speech assets. Using the <strong>gTTS</strong> library, the script processes complex data structures to generate organized audio directories.</p>
-    </section>
+    <main id="main-content">
 
-    <section id="featured-items">
-        <h2>Core Features</h2>
-        <ul>
-            <li><strong>Automated Directory Mapping:</strong> Automatically creates unique folders for each phrase ID.</li>
-            <li><strong>Six-Language Support:</strong> Simultaneous generation for EN, SK, TR, HU, IT, and RO.</li>
-            <li><strong>Efficient File Handling:</strong> Includes logic to skip existing files to save processing time.</li>
-        </ul>
-    </section>
+        <section>
+            <h1>Development Portfolio Overview</h1>
 
-    <section id="updates">
-        <h2>Technical Stack</h2>
-        <p>This project demonstrates my proficiency in <strong>Python 3</strong>, file system operations (<code>os</code> and <code>path</code> modules), and integrating third-party APIs for generative media.</p>
-    </section>
-</main>
+            <h2>Welcome</h2>
+            <p>
+                Welcome to my project showcase. I am a Junior Developer focused on bridging the gap 
+                between efficient backend logic and accessible web interfaces. This portfolio 
+                highlights my work in automation, data structuring, and full-stack integration.
+            </p>
+
+            <p>
+                Explore the sections below to see how I use languages like C and Python to 
+                solve practical problems, from media management to automated language tools.
+            </p>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+
+            <article>
+                <h3>Erasmus Digital Dictionary</h3>
+                <p>
+                    A Flask-based web application designed to facilitate multilingual learning. 
+                    The core engine uses Python to automate speech synthesis, providing users with 
+                    instant audio translations across several European languages including 
+                    Romanian, Turkish, and Slovak.
+                </p>
+            </article>
+
+            <article>
+                <h3>Automated Audio Pipeline</h3>
+                <p>
+                    This utility focuses on file system optimization. It checks for existing 
+                    media assets and intelligently generates missing audio files using API 
+                    integrations, ensuring a complete and redundant-free library for 
+                    educational applications.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Systems in Progress</h2>
+
+            <article>
+                <h3>C Photo Gallery Manager</h3>
+                <p>
+                    A low-level system built in C that handles complex data through custom structures 
+                    like <code>Album</code> and <code>Photo</code>. It features an external file 
+                    I/O system that persists user data across sessions using organized text-based records.
+                </p>
+            </article>
+
+            <article>
+                <h3>Resource Audit System</h3>
+                <p>
+                    An ongoing effort to create a monitoring tool that tracks asset generation 
+                    metrics. It calculates processing times and storage efficiency, providing 
+                    a clear audit trail for large-scale data processing tasks.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Technical Skills & Highlights</h2>
+
+            <p>
+                Through these implementations, I have developed a strong foundation in 
+                logic design and user-centric web development:
+            </p>
+
+            <ul>
+                <li>Python Flask & Jinja2 Templating</li>
+                <li>Low-level Data Structuring (C)</li>
+                <li>API Integration & Media Automation</li>
+                <li>File System I/O & Persistent Storage</li>
+                <li>Semantic HTML5 & Accessible CSS Design</li>
+            </ul>
+        </section>
+
+    </main>
 
     <footer>
-        <p>&copy; 2026 Junior Dev Showcase. Built for UVT Web Development Course.</p>
+        <p>&copy; 2026 Junior Dev Showcase | Web Design Portfolio</p>
     </footer>
 
 </body>
