@@ -1,253 +1,178 @@
-/* =========================================================
-   Project: Junior Developer Portfolio - Original Style
-   (Movement effects removed, Skip-link visible)
-   ========================================================= */
-
 body {
     margin: 0;
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: #f0f2f0;
     color: #1a2421;
-    font-size: 1rem;
     line-height: 1.6;
 }
 
-/* --- Skip Link (Always Visible) --- */
+/* Link-ul pentru accesibilitate */
 .skip-link {
-    display: inline-block;
-    margin: 16px;
-    background: #31c99c;
-    color: #fff;
-    padding: 7px 16px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: medium;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: #31c99c;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    border: 1px solid #065f46;
+    border-radius: 6px;
+    z-index: 1000;
 }
 
-.skip-link:hover {
-    background-color: #3730a3;
-}
-
-/* --- Header & Branding --- */
 header {
     text-align: center;
-    padding: 100px 20px;
-    background: linear-gradient(135deg, #064e3b 0%, #065f46 50%, #059669 100%);
-    position: relative;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #064e3b, #059669);
+    color: white;
     border-bottom: 5px solid #f59e0b;
 }
 
-.site-name {
+header h1 {
     font-size: 3rem;
-    font-weight: 900;
     margin: 0;
-    color: #ffffff;
-    letter-spacing: -1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.site-tagline {
-    font-size: 1.1rem;
-    color: #d1fae5;
-    margin-top: 5px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* --- Navigation --- */
+/*Navigation*/
 nav {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: white;
     padding: 15px 0;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-    position: sticky;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky; /* Rămâne lipit sus la scroll */
     top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #d1d5db;
 }
 
 nav ul {
     list-style: none;
-    margin: 0 auto;
-    padding: 0 40px;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    max-width: 1100px;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
     text-decoration: none;
-    color: #000000;
-    font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px;
+
 }
 
 nav a:hover {
     background-color: #ecfdf5;
     color: #059669;
+    border-radius: 8px;
 }
 
-nav a[aria-current="page"] {
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: 0 4px 10px rgba(6, 78, 59, 0.2);
-}
-
-/* --- Main Layout --- */
+/* Main structure*/
 main {
-    max-width: 1100px;
-    margin: 60px auto;
-    padding: 0 40px;
-    min-height: 75vh;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-/* Sections - Removed movement/transform effects */
 section {
-    background: #ffffff;
-    padding: 50px 60px;
-    margin-bottom: 45px;
-    border-radius: 16px;
-    border: 1px solid rgba(229, 231, 235, 0.8);
-    border-left: 8px solid #f59e0b;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    background: white;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    border-left: 8px solid #f59e0b; /* Linia portocalie din stânga */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* Stil diferit pentru secțiunile pare */
 section:nth-child(even) {
-    background: #f9fafb;
-    border-left-color: #059669;
+    background-color: #f9fafb;
+    border-left-color: #059669; /* Linie verde la secțiunile pare */
 }
 
-/* Articles */
 article {
-    margin: 30px 0;
-    padding: 25px 35px;
-    background-color: #fcfdfd;
-    border-radius: 12px;
-    border: 1px solid #f3f4f6;
+    margin: 20px 0;
+    padding: 20px;
     border-left: 4px solid #059669;
-    max-width: 95%;
+    background-color: #fcfdfd;
 }
 
-/* --- Typography --- */
-h1, h2 {
-    color: #000000;
-}
-
+/* Tipografie */
 h2 {
-    font-size: 1.8rem;
-    border-bottom: 2px solid #f3f4f6;
+    color: black;
+    border-bottom: 2px solid #eee;
     padding-bottom: 10px;
 }
 
 h3 {
     color: #b45309;
-    margin-top: 0;
 }
 
-/* --- Data Table --- */
+code {
+    background-color: #fef3c7;
+    color: #92400e;
+    padding: 2px 5px;
+    font-family: monospace;
+}
+
+/* Tabele */
 table {
     width: 100%;
-    margin: 40px 0;
-    border-spacing: 0;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #e5e7eb;
-    background: #ffffff;
+    border-collapse: collapse; /* Lipeste marginile celulelor */
+    margin: 20px 0;
 }
 
 th {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px;
+    background-color: black;
+    color: white;
+    padding: 12px;
     text-align: left;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 1px;
 }
 
 td {
-    padding: 15px;
-    border-bottom: 1px solid #f3f4f6;
-    color: #4b5563;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
 }
 
-tr:nth-child(even) {
-    background-color: #f9fafb;
-}
-
-/* --- Accessible Form --- */
-form {
-    max-width: 650px;
-    margin: 20px auto 0;
-}
-
+/* Formular */
 fieldset {
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 35px;
-    background-color: #fcfdfd;
-}
-
-legend {
-    font-weight: 700;
-    color: #000000;
-    padding: 0 15px;
-    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #374151;
-    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 input, select, textarea {
     width: 100%;
-    padding: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 1rem;
-    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
 }
 
-input:focus, textarea:focus {
-    border-color: #059669;
-    box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.1);
-    outline: none;
-}
-
-button[type="submit"] {
-    margin-top: 30px;
+button {
     width: 100%;
-    padding: 16px;
-    background: linear-gradient(to right, #000000, #059669);
-    color: #ffffff;
+    padding: 15px;
+    background: #059669;
+    color: white;
     border: none;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    font-size: 18px;    
     cursor: pointer;
-    transition: opacity 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    opacity: 0.9;
+button:hover {
+    background: #064e3b;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px;
     background-color: #111827;
     color: #9ca3af;
     border-top: 5px solid #f59e0b;
-    margin-top: 40px;
 }
+
